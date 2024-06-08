@@ -1,0 +1,13 @@
+<form class="flex items-center space-x-2">
+  <button type="submit">
+    <i class="pi pi-search pt-1.5 h-6 w-6 text-gray-400 "></i>
+  </button>
+  <input id="search"
+         type="search"
+         name="search"
+         placeholder="Search"
+         [(ngModel)]="searchTerm"
+         (change)="onSearchTermChange()"
+         class="bg-transparent text-white placeholder-white outline-none"
+  />
+</form>
