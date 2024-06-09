@@ -1,0 +1,52 @@
+<div class="mb-10">
+
+  <div class="flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12">
+
+    <div class="absolute left-0 top-0 -z-10 h-[95vh] w-screen flex-col bg-black">
+
+      <video
+        autoplay
+        loop
+        muted
+        class="z-20 hidden h-full object-cover opacity-50 transition duration-1000 ease-in-out lg:block">
+        <source [src]="movie?.videoFileURL" type="video/mp4">
+      </video>
+
+      <img [src]="movie?.bannerFileURL"
+           [alt]="movie?.title"
+           class="object-cover object-top opacity-38 h-full w-full lg:hidden"
+      />
+
+    </div>
+
+    <h1 class="text-2xl font-bold md:text-4xl lg:text-7xl">
+      {{ movie?.title }}
+    </h1>
+
+    <p class="max-w-xs text-xs md:max-w-lg md:text-lg lg:max-w-2xl">
+      {{ movie?.description }}
+    </p>
+
+  </div>
+
+  <div class="flex space-x-3">
+
+    <a href="javascript:void(0)" (click)="watch()">
+      <button
+        class="md:text-xl flex cursor-pointer items-center gap-x-2 rounded bg-white px-5 py-1.5 text-sm font-semibold text-black transition hover:opacity-75 md:px-8 md:py-2.5">
+        <i class="pi pi-play "></i>
+        Play
+      </button>
+
+    </a>
+
+    <button
+      class="md:text-xl flex cursor-pointer items-center gap-x-2 rounded bg-gray-600 px-5 py-1.5 text-sm font-semibold text-black transition hover:opacity-75 md:px-8 md:py-2.5">
+      <i class="pi pi-info-circle h-6 w-6"></i>
+      More Info
+    </button>
+
+  </div>
+
+</div>
+

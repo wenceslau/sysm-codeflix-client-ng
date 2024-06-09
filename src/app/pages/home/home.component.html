@@ -1,0 +1,15 @@
+<div class="relative bg-gradient-to-b pb-8">
+
+  <app-header></app-header>
+
+  <div class="relative overflow-hidden p-8 pb-20 lg:px-16">
+
+    <app-banner [movie]="featuredMovie"></app-banner>
+
+    @for (item of genreMovies; track item) {
+      <app-movie-row [sectionTitle]="item.sectionTitle" [movies]="item.movies"></app-movie-row>
+    }
+
+  </div>
+
+</div>

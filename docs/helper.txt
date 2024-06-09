@@ -1,0 +1,36 @@
+npm install -D tailwindcss postcss autoprefixer       => command to Install Tailwind CSS
+npx tailwindcss init                                  => command to create tailwind.config.js file
+    Add the paths to all of your template files in your tailwind.config.js file.
+        /** @type {import('tailwindcss').Config} */
+        module.exports = {
+          content: [
+            "./src/**/*.{html,ts}",
+          ],
+          theme: {
+            extend: {},
+          },
+          plugins: [],
+        }
+
+    Add the @tailwind directives for each of Tailwind’s layers to your ./src/styles.css file.
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+
+    https://tailwindcss.com/docs/guides/angular
+
+npm install vidstack@next                                => command to install vidstack, player for video
+    Apply the custom elements schema like so:
+        import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+        import { BrowserModule } from '@angular/platform-browser';
+
+        @NgModule({
+          // ...
+          imports: [BrowserModule],
+          schemas: [CUSTOM_ELEMENTS_SCHEMA],
+        })
+        export class AppModule {}
+
+    Import Styles
+        import 'vidstack/player/styles/default/theme.css';
+        import 'vidstack/player/styles/default/layouts/video.css';

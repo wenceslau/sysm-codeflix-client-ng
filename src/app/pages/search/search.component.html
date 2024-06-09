@@ -1,0 +1,30 @@
+<div>
+
+  <div class='relative bg-gradient-to-b pb-8'>
+
+    <app-header></app-header>
+
+    <div class='relative mb-48 mt-20 h-screen pl-4 lg:pl-16 '>
+
+      <h1 class='mb-4 text-2xl font-bold'>
+        Search results for: <span class='text-red-500'></span>
+      </h1>
+      <div class='grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-8 lg:gap-8'>
+
+        @if (movies.length === 0) {
+
+          <div class='text-white'>No movies found</div>
+
+        } @else {
+
+          @for (item of movies; track item) {
+
+            <app-movie-card [movie]="item"></app-movie-card>
+
+          }
+        }
+
+      </div>
+    </div>
+  </div>
+</div>
