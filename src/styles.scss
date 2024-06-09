@@ -1,10 +1,24 @@
 @import "primeicons/primeicons.css";
 @import 'vidstack/player/styles/base.css';
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  @apply bg-[#383838] text-white
+}
 
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom,
@@ -16,6 +30,3 @@
     #141414 100%);
 }
 
-body {
-  @apply bg-[#383838] text-white
-}
