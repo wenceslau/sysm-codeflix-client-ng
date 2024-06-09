@@ -11,6 +11,18 @@
       </h1>
       <div class='grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-8 lg:gap-8'>
 
+        @if (movies.length === 0) {
+
+          <div class='text-white'>No movies found</div>
+
+        } @else {
+
+          @for (item of movies; track item) {
+
+            <app-movie-card [movie]="item"></app-movie-card>
+
+          }
+        }
 
       </div>
     </div>
