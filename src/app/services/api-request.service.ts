@@ -2,6 +2,8 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from 'rxjs';
 
+import { environment } from "../../environments/environment";
+
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +11,7 @@ import {Observable} from 'rxjs';
 export class ApiRequestService {
 
   // API_URL = 'https://codeflix-api-inky.vercel.app';
-  API_URL = 'http://localhost:3333';
+  API_URL = environment.api;
 
 
   constructor(private http: HttpClient) {
