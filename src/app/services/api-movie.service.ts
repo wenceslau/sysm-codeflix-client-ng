@@ -22,4 +22,21 @@ export class ApiMovieService {
       options
     );
   }
+
+  searchMovies(
+    title: string = '',
+    genre: string = '',
+    options: RequestOptions = {
+      _limit: 100
+    }
+  ): Observable<any> {
+    return this.apiRequestService.get(
+      'movies',
+      {
+        title_like: encodeURIComponent(title),
+        genres_like: encodeURIComponent(genre),
+      },
+      options
+    );
+  }
 }

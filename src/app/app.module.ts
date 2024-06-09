@@ -17,6 +17,7 @@ import { MovieRowComponent } from './components/movie-row/movie-row.component';
 import { MovieCardComponent } from './components/movie-card/movie-card.component';
 import { MovieInfoComponent } from './components/movie-info/movie-info.component';
 import { MovieRatingComponent } from './components/movie-rating/movie-rating.component';
+import { SearchComponent } from './pages/search/search.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { MovieRatingComponent } from './components/movie-rating/movie-rating.com
     MovieRowComponent,
     MovieCardComponent,
     MovieInfoComponent,
-    MovieRatingComponent
+    MovieRatingComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
