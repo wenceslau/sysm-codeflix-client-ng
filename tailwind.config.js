@@ -6,6 +6,11 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('vidstack/tailwind.cjs')({
+      prefix: 'media',
+      webComponents: true,
+    }),
+  ],
 }
 

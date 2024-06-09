@@ -1,0 +1,40 @@
+<div class="flex h-screen justify-center align-middle">
+  <media-player
+    controls="'true'"
+    title="{{movie?.title}}"
+    src="{{movie?.videoFileURL}}"
+    class="ring-media-focus  aspect-video w-full rounded-md bg-black ">
+    <a href="/home">
+      <i class="pi pi-arrow-left media-playing:opacity-0 invisible absolute left-8 top-8 z-50 h-8 cursor-pointer text-white md:visible" ></i>
+    </a>
+
+    <div
+      class="visible absolute left-2 top-8 z-50 transition-opacity duration-500 media-playing:opacity-0 md:invisible">
+      <div class="flex flex-row items-center gap-4">
+        <a href="/home">
+          <i class="pi pi-arrow-left h-8 cursor-pointer text-white" ></i>
+        </a>
+        <h1 class="text-2xl font-bold md:text-4xl lg:text-7xl">{{movie?.title}}</h1>
+      </div>
+
+    </div>
+
+
+    <media-provider class='relative mx-auto flex aspect-video max-w-fit justify-center rounded-md align-middle'>
+      <div
+        class='media-playing:opacity-0 invisible absolute left-8 top-96 z-50 transition-opacity duration-500 md:visible'>
+        <h1 class='text-2xl font-bold md:text-4xl lg:text-7xl'>
+          {{movie?.title}}
+        </h1>
+        <p class='text-shadow-md mt-4 max-w-xs text-xs md:max-w-lg md:text-lg lg:max-w-2xl'>
+          {{movie?.description}}
+        </p>
+      </div>
+
+    </media-provider>
+
+  </media-player>
+<!--  <media-player title="Sprite Fight" src="https://files.vidstack.io/sprite-fight/720p.mp4">-->
+<!--    <media-provider></media-provider>-->
+<!--  </media-player>-->
+</div>

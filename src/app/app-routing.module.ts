@@ -5,6 +5,7 @@ import {SearchComponent} from "./pages/search/search.component";
 import {LoginComponent} from "./auth/login/login.component";
 import {RegisterComponent} from "./auth/register/register.component";
 import {ForgotPasswordComponent} from "./auth/forgot-password/forgot-password.component";
+import {PlayerComponent} from "./pages/player/player.component";
 
 const routes: Routes = [
   {
@@ -35,6 +36,11 @@ const routes: Routes = [
   {
     path: 'search',
     component: SearchComponent,
+    canActivate: []
+  },
+  {
+    path: 'player/:id',
+    component: PlayerComponent,
     canActivate: []
   }
 ];

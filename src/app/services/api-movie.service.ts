@@ -12,7 +12,7 @@ export class ApiMovieService {
   }
 
   getFeaturedMovie(id: string): Observable<any> {
-    return this.apiRequestService.get(`featured/${id}`);
+    return this.apiRequestService.get(`featured/${encodeURIComponent(id)}`);
   }
 
   getMoviesByGenre(genre: string, options?: RequestOptions): Observable<any> {
@@ -38,5 +38,9 @@ export class ApiMovieService {
       },
       options
     );
+  }
+
+  getMovieById(id: string) {
+    return this.apiRequestService.get(`movies/${encodeURIComponent(id)}`);
   }
 }

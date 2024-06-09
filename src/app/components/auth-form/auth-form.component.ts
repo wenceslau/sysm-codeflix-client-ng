@@ -14,6 +14,10 @@ export class AuthFormComponent {
   constructor(private router: Router) {
   }
 
+  login(): void {
+    this.router.navigate(['/home']);
+  }
+
   redirectTo(): void {
     console.log('redirecting to', this.formType);
     if (this.formType === 'login') {

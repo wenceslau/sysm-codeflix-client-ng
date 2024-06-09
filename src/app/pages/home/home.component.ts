@@ -40,6 +40,7 @@ export class HomeComponent implements OnInit{
     this.apiMovieService.getFeaturedMovie('105')
       .subscribe({
         next: (data) => {
+          console.log('getFeaturedMovie', data);
           this.featuredMovie = data;
         },
         error: (e) => console.error(e)
