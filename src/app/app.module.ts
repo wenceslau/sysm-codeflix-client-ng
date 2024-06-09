@@ -18,6 +18,10 @@ import { MovieCardComponent } from './components/movie-card/movie-card.component
 import { MovieInfoComponent } from './components/movie-info/movie-info.component';
 import { MovieRatingComponent } from './components/movie-rating/movie-rating.component';
 import { SearchComponent } from './pages/search/search.component';
+import { LoginComponent } from './auth/login/login.component';
+import { AuthFormComponent } from './components/auth-form/auth-form.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,11 @@ import { SearchComponent } from './pages/search/search.component';
     MovieCardComponent,
     MovieInfoComponent,
     MovieRatingComponent,
-    SearchComponent
+    SearchComponent,
+    LoginComponent,
+    AuthFormComponent,
+    RegisterComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
