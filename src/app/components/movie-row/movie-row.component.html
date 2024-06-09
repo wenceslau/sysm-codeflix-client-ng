@@ -1,0 +1,19 @@
+<div class="flex-col space-y-4">
+  <div class="flex">
+    <h2 class="-ml-2 inline-flex items-center text-2xl font-bold">
+      {{sectionTitle}}
+    </h2>
+  </div>
+  <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-8">
+
+    @if (movies) {
+
+      @for (item of movies; track item) {
+        <app-movie-card [movie]="item" ></app-movie-card>
+      }
+
+    }
+
+  </div>
+
+</div>

@@ -13,6 +13,10 @@ import {FormsModule} from "@angular/forms";
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { BannerComponent } from './components/banner/banner.component';
 import {NgOptimizedImage} from "@angular/common";
+import { MovieRowComponent } from './components/movie-row/movie-row.component';
+import { MovieCardComponent } from './components/movie-card/movie-card.component';
+import { MovieInfoComponent } from './components/movie-info/movie-info.component';
+import { MovieRatingComponent } from './components/movie-rating/movie-rating.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import {NgOptimizedImage} from "@angular/common";
     NavLinksComponent,
     SearchFormComponent,
     UserProfileComponent,
-    BannerComponent
+    BannerComponent,
+    MovieRowComponent,
+    MovieCardComponent,
+    MovieInfoComponent,
+    MovieRatingComponent
   ],
   imports: [
     BrowserModule,

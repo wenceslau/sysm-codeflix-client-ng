@@ -10,12 +10,14 @@ import {Movie} from "../../types/movies";
 })
 export class HomeComponent {
 
+  genreMovies: GenreMovies[] = [];
   featuredMovie: Movie | undefined;
+  genres = ['Biography', 'Action', 'Drama', 'Comedy', 'Crime'];
 
   constructor(private apiMovieService: ApiMovieService ) { }
 
    ngOnInit() {
-     this.apiMovieService.getFeaturedMovie('103')
+     this.apiMovieService.getFeaturedMovie('105')
        .subscribe({
          next: (data) => {
            this.featuredMovie = data;
@@ -23,12 +25,23 @@ export class HomeComponent {
          },
          error: (e) => console.error(e)
        });
-    // const genres = ['Biography', 'Action', 'Drama', 'Comedy', 'Crime'];
-    // const movies = await Promise.all(genres.map(async genre => {
-    //       const movies = await this.apiRequestService.getMoviesByGenre(genre, { _limit: 8 });
-    //       return { sectionTitle: genre, movies}
-    //     })
-    // );
-  }
 
+      this.genres.map(genre => {
+
+        this.apiMovieService.getMoviesByGenre(genre, { _limit: 8 })
+          .subscribe({
+            next: (data) => {
+              this.genreMovies.push({ sectionTitle: genre, movies: data });
+              console.log(data);
+            },
+            error: (e) => console.error(e)
+          });
+
+      });
+  }
+}
+
+export interface GenreMovies{
+  sectionTitle: string;
+  movies: Movie[];
 }
