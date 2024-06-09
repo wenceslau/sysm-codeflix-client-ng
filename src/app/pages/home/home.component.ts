@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {ApiRequestService} from "../../services/api-request.service";
 import {ApiMovieService} from "../../services/api-movie.service";
 import {Movie} from "../../types/movies";
 

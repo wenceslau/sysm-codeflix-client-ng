@@ -1,5 +1,4 @@
-import {Component, Input, Output} from '@angular/core';
-import EventEmitter from "node:events";
+import {Component, Input} from '@angular/core';
 import {Router} from "@angular/router";
 
 @Component({
@@ -38,9 +37,6 @@ export class AuthFormComponent {
 
   textQuestion(): string {
     return this.formType === 'login' ? 'Need an account?' : 'Already have an account?';
-  }
-
-  onClickSubmit(target: any): void {
   }
 
 }
