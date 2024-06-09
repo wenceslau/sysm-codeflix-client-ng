@@ -8,7 +8,9 @@ import {Observable} from 'rxjs';
 })
 export class ApiRequestService {
 
-  API_URL = 'https://codeflix-api-inky.vercel.app';
+  // API_URL = 'https://codeflix-api-inky.vercel.app';
+  API_URL = 'http://localhost:3333';
+
 
   constructor(private http: HttpClient) {
   }
@@ -71,6 +73,8 @@ export class ApiRequestService {
     let httpHeader = new HttpHeaders();
     httpHeader = httpHeader
       .append('Content-Type', 'application/json')
+      .append('Accept', 'application/json')
+      .append('Access-Control-Allow-Origin', '*');
       //.append('Authorization', 'Bearer ' + localStorage.getItem('token'));
     return httpHeader;
   }
