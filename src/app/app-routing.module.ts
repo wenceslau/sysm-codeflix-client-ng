@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {HomeComponent} from "./pages/home/home.component";
-import {SearchComponent} from "./pages/search/search.component";
-import {LoginComponent} from "./auth/login/login.component";
-import {RegisterComponent} from "./auth/register/register.component";
-import {ForgotPasswordComponent} from "./auth/forgot-password/forgot-password.component";
-import {PlayerComponent} from "./pages/player/player.component";
+import {HomeComponent} from './pages/home/home.component';
+import {SearchComponent} from './pages/search/search.component';
+import {LoginComponent} from './auth/login/login.component';
+import {RegisterComponent} from './auth/register/register.component';
+import {ForgotPasswordComponent} from './auth/forgot-password/forgot-password.component';
+import {PlayerComponent} from './pages/player/player.component';
 
 const routes: Routes = [
   {

@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Movie} from "../../types/movies";
-import {ApiMovieService} from "../../services/api-movie.service";
-import {ActivatedRoute} from "@angular/router";
+import {Movie} from '../../types/movies';
+import {ApiMovieService} from '../../services/api-movie.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -22,7 +22,7 @@ export class SearchComponent implements OnInit {
 
     this.activatedRoute.queryParamMap.subscribe(params => {
 
-      let title: string  =   params.get('title')?.toString() || '';
+      const title: string  =   params.get('title')?.toString() || '';
       const genre = params.get('genre')?.toString() || '';
 
       console.log('SearchComponent.ngOnInit', title, genre);

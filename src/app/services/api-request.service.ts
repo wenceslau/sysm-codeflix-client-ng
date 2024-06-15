@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 
-import { environment } from "../../environments/environment";
+import { environment } from '../../environments/environment';
 
 
 @Injectable({
@@ -22,7 +22,7 @@ export class ApiRequestService {
       options: RequestOptions = {}): Observable<any> {
 
     const httpHeader = this.buildHeader();
-    let urlEndpoint = this.buildEndpoint(endpoint, options, query);
+    const urlEndpoint = this.buildEndpoint(endpoint, options, query);
 
     return this.http.get(urlEndpoint, {headers: httpHeader});
   }
@@ -33,7 +33,7 @@ export class ApiRequestService {
        options: RequestOptions = {}): Observable<any> {
 
     const httpHeader = this.buildHeader();
-    let urlEndpoint = this.buildEndpoint(endpoint, options, query);
+    const urlEndpoint = this.buildEndpoint(endpoint, options, query);
 
     return this.http.post(urlEndpoint, body, {headers: httpHeader});
   }
@@ -44,7 +44,7 @@ export class ApiRequestService {
        options: RequestOptions = {}): Observable<any> {
 
     const httpHeader = this.buildHeader();
-    let urlEndpoint = this.buildEndpoint(endpoint, options, query);
+    const urlEndpoint = this.buildEndpoint(endpoint, options, query);
 
     return this.http.put(urlEndpoint, body, {headers: httpHeader});
   }
@@ -55,7 +55,7 @@ export class ApiRequestService {
       options: RequestOptions = {}): Observable<any> {
 
     const httpHeader = this.buildHeader();
-    let urlEndpoint = this.buildEndpoint(endpoint, options, query);
+    const urlEndpoint = this.buildEndpoint(endpoint, options, query);
 
     return this.http.patch(urlEndpoint, body, {headers: httpHeader});
   }
@@ -65,7 +65,7 @@ export class ApiRequestService {
         options: RequestOptions = {}): Observable<any> {
 
     const httpHeader = this.buildHeader();
-    let urlEndpoint = this.buildEndpoint(endpoint, options, query);
+    const urlEndpoint = this.buildEndpoint(endpoint, options, query);
 
     return this.http.delete(urlEndpoint,  {headers: httpHeader});
   }

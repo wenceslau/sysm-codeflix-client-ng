@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Movie} from "../../types/movies";
+import {Movie} from '../../types/movies';
 
 @Component({
   selector: 'app-movie-row',
@@ -8,7 +8,7 @@ import {Movie} from "../../types/movies";
 })
 export class MovieRowComponent {
 
-  @Input() movies: Movie[] = []
-  @Input() sectionTitle: string | undefined
+  @Input() movies: Movie[] = [];
+  @Input() sectionTitle: string | undefined;
 
 }

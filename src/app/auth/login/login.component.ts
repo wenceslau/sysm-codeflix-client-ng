@@ -9,6 +9,6 @@ export class LoginComponent {
 
 
   onSubmit(event: any): void {
-    console.log(event)
+    console.log(event);
   }
 }

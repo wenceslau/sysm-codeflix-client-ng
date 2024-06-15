@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
-import {Movie} from "../../types/movies";
-import {Router} from "@angular/router";
+import {Movie} from '../../types/movies';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-movie-info',
@@ -9,7 +9,7 @@ import {Router} from "@angular/router";
 })
 export class MovieInfoComponent {
 
-  @Input() movie: Movie | undefined
+  @Input() movie: Movie | undefined;
 
   constructor(private router: Router) {
 

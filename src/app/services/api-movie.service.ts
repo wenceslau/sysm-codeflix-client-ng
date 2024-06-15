@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
-import {ApiRequestService} from "./api-request.service";
-import {Observable} from "rxjs";
-import {RequestOptions} from "./api-request.service";
+import {ApiRequestService} from './api-request.service';
+import {Observable} from 'rxjs';
+import {RequestOptions} from './api-request.service';
 
 @Injectable({
   providedIn: 'root'

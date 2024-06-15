@@ -1,6 +1,4 @@
 import {Component, Input} from '@angular/core';
-import {Movie} from "../../types/movies";
-import {an} from "vidstack/types/vidstack-knV-Kht3";
 
 @Component({
   selector: 'app-movie-rating',

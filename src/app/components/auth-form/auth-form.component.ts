@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Router} from "@angular/router";
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-auth-form',
@@ -8,7 +8,7 @@ import {Router} from "@angular/router";
 })
 export class AuthFormComponent {
 
-  @Input() formType: string | undefined
+  @Input() formType: string | undefined;
 
 
   constructor(private router: Router) {

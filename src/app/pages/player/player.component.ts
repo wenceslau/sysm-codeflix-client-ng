@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Movie} from "../../types/movies";
-import {ApiMovieService} from "../../services/api-movie.service";
-import {ActivatedRoute, ParamMap} from "@angular/router";
+import {Movie} from '../../types/movies';
+import {ApiMovieService} from '../../services/api-movie.service';
+import {ActivatedRoute, ParamMap} from '@angular/router';
 
 @Component({
   selector: 'app-player',
@@ -19,7 +19,7 @@ export class PlayerComponent implements OnInit{
 
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe((params: ParamMap) => {
-      let id = params.get('id')?.toString() || ''
+      const id = params.get('id')?.toString() || '';
       this.apiMovieService.getMovieById(id)
         .subscribe({
           next: (data) => {
