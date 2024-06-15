@@ -55,20 +55,24 @@ npm install vidstack@next                                => command to install v
         "quotes": ["error", "single"],
         "semi": "error"
 
-⇒ ⇒ npm run lint or ng lint
+⇒ npm run lint or ng lint
     command to run lint
 
 ⇒ npm run lint -- --fix
     command to run lint with fix
 
-⇒ npm install --save-dev husky
+⇒ npm install husky -D
     command to install husky
-
-⇒ npm install @commitlint/cli --save-dev
-⇒ npm install @commitlint/config-conventional --save-dev
-    command to install commitlint, it is not required for husky, only if you want to use commitlint convention
 
 ⇒ npx husky init
     command to initializer husky, it will create .husky folder
 
-⇒ create file .husky/pre-commit
+⇒ pre-commit content file
+    #!/bin/sh
+    . "$(dirname "$0")/_/husky.sh"
+
+    npx lint-staged
+
+⇒ npm install @commitlint/cli -D
+⇒ npm install @commitlint/config-conventional -D
+    command to install commitlint, it is not required for husky, only if you want to use commitlint convention
