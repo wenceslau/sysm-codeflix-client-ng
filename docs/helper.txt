@@ -34,3 +34,51 @@ npm install vidstack@next                                => command to install v
     Import Styles
         import 'vidstack/player/styles/default/theme.css';
         import 'vidstack/player/styles/default/layouts/video.css';
+
+    Add this entries in tailwind.config.js
+      plugins: [
+        require('vidstack/tailwind.cjs')({
+          prefix: 'media',
+          webComponents: true,
+        }),
+      ],
+
+
+
+⇒ npm install eslint --save-dev
+    command to install eslint
+
+⇒ npx eslint --init
+    command to create eslint configuration file
+
+    config file eslint.config.js
+  {
+    rules: {
+      "semi": [
+        "error",
+        "always"
+      ],
+      "quotes": [
+        "error",
+        "single"
+      ]
+    }
+  }
+
+⇒ ⇒ npm run lint
+    command to run lint
+
+⇒ npm run lint -- --fix
+    command to run lint with fix
+
+⇒ npm install --save-dev husky
+    command to install husky
+
+⇒ npm install @commitlint/cli --save-dev
+⇒ npm install @commitlint/config-conventional --save-dev
+    command to install commitlint, it is not required for husky, only if you want to use commitlint convention
+
+⇒ npx husky init
+    command to initializer husky, it will create .husky folder
+
+⇒ create file .husky/pre-commit
