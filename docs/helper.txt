@@ -51,9 +51,11 @@ npm install vidstack@next                                => command to install v
 ⇒ ng add @angular-eslint/schematics
    command to add angular-eslint to the project, add entries in angular.json and create the .eslintrc.json file
 
-  "@typescript-eslint/no-explicit-any": "off"
+        "@typescript-eslint/no-explicit-any": "off",
+        "quotes": ["error", "single"],
+        "semi": "error"
 
-⇒ ⇒ npm run lint
+⇒ ⇒ npm run lint or ng lint
     command to run lint
 
 ⇒ npm run lint -- --fix
