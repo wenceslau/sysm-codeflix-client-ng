@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 
-import { environment } from '../../environments/environment';
+import {environment} from '../../environments/environment';
 
 
 @Injectable({
@@ -39,9 +39,9 @@ export class ApiRequestService {
   }
 
   put(endpoint: string,
-       body: any,
-       query: ApiQueryParams = {},
-       options: RequestOptions = {}): Observable<any> {
+      body: any,
+      query: ApiQueryParams = {},
+      options: RequestOptions = {}): Observable<any> {
 
     const httpHeader = this.buildHeader();
     const urlEndpoint = this.buildEndpoint(endpoint, options, query);
@@ -50,9 +50,9 @@ export class ApiRequestService {
   }
 
   patch(endpoint: string,
-      body: any,
-      query: ApiQueryParams = {},
-      options: RequestOptions = {}): Observable<any> {
+        body: any,
+        query: ApiQueryParams = {},
+        options: RequestOptions = {}): Observable<any> {
 
     const httpHeader = this.buildHeader();
     const urlEndpoint = this.buildEndpoint(endpoint, options, query);
@@ -61,13 +61,13 @@ export class ApiRequestService {
   }
 
   delete(endpoint: string,
-        query: ApiQueryParams = {},
-        options: RequestOptions = {}): Observable<any> {
+         query: ApiQueryParams = {},
+         options: RequestOptions = {}): Observable<any> {
 
     const httpHeader = this.buildHeader();
     const urlEndpoint = this.buildEndpoint(endpoint, options, query);
 
-    return this.http.delete(urlEndpoint,  {headers: httpHeader});
+    return this.http.delete(urlEndpoint, {headers: httpHeader});
   }
 
   private buildHeader() {
@@ -77,7 +77,7 @@ export class ApiRequestService {
       .append('Content-Type', 'application/json')
       .append('Accept', 'application/json')
       .append('Access-Control-Allow-Origin', '*');
-      //.append('Authorization', 'Bearer ' + localStorage.getItem('token'));
+    //.append('Authorization', 'Bearer ' + localStorage.getItem('token'));
     return httpHeader;
   }
 

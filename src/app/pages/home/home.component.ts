@@ -7,18 +7,19 @@ import {Movie} from '../../types/movies';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent implements OnInit {
 
   genreMovies: GenreMovies[] = [];
   featuredMovie: Movie | undefined;
   genres = ['Biography', 'Action', 'Drama', 'Comedy', 'Crime'];
 
-  constructor(private apiMovieService: ApiMovieService ) { }
+  constructor(private apiMovieService: ApiMovieService) {
+  }
 
-   ngOnInit() {
-     this.loadFeaturedMovie();
-     this.loadMoviesByGenre();
-   }
+  ngOnInit() {
+    this.loadFeaturedMovie();
+    this.loadMoviesByGenre();
+  }
 
   private loadMoviesByGenre() {
     console.log('loadMoviesByGenre');
@@ -48,7 +49,7 @@ export class HomeComponent implements OnInit{
   }
 }
 
-export interface GenreMovies{
+export interface GenreMovies {
   sectionTitle: string;
   movies: Movie[];
 }

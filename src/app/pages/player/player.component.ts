@@ -8,7 +8,7 @@ import {ActivatedRoute, ParamMap} from '@angular/router';
   templateUrl: './player.component.html',
   styleUrl: './player.component.scss'
 })
-export class PlayerComponent implements OnInit{
+export class PlayerComponent implements OnInit {
 
   movie: Movie | undefined;
 

@@ -15,6 +15,7 @@ export class SearchFormComponent implements OnInit {
   ) {
 
   }
+
   ngOnInit(): void {
   }
 
@@ -22,7 +23,7 @@ export class SearchFormComponent implements OnInit {
     this.router.navigate(
       ['/search'],
       {
-        queryParams: { title: this.searchTerm},
+        queryParams: {title: this.searchTerm},
         queryParamsHandling: 'merge'
       });
   }

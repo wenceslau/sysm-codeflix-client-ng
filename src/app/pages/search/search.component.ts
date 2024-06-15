@@ -22,7 +22,7 @@ export class SearchComponent implements OnInit {
 
     this.activatedRoute.queryParamMap.subscribe(params => {
 
-      const title: string  =   params.get('title')?.toString() || '';
+      const title: string = params.get('title')?.toString() || '';
       const genre = params.get('genre')?.toString() || '';
 
       console.log('SearchComponent.ngOnInit', title, genre);

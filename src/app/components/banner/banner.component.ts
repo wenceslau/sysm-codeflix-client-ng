@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Movie} from '../../types/movies';
 import {Router} from '@angular/router';
 
@@ -11,7 +11,8 @@ export class BannerComponent {
 
   @Input() movie: Movie | undefined;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+  }
 
   watch() {
     this.router.navigate(['player', this.movie?.id]);

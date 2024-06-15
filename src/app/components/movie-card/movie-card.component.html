@@ -2,17 +2,18 @@
 
   <img [alt]="movie?.title"
        [src]="movie?.bannerFileURL"
-       width="600"
-       height="400"
        class="rounded-md object-cover object-top transition"
+       height="400"
+       width="600"
   />
 
-  <div class="invisible absolute top-0 z-10 w-full min-w-[20vw] scale-0 opacity-0 transition delay-300 duration-200 group-hover:-translate-y-[6vw] group-hover:scale-110 group-hover:opacity-100 sm:visible">
+  <div
+    class="invisible absolute top-0 z-10 w-full min-w-[20vw] scale-0 opacity-0 transition delay-300 duration-200 group-hover:-translate-y-[6vw] group-hover:scale-110 group-hover:opacity-100 sm:visible">
     <img [alt]="movie?.title"
          [src]="movie?.bannerFileURL"
-         width="600"
-         height="400"
          class="duration h-[12vw] w-full cursor-pointer rounded-t-md object-cover object-top shadow-xl transition"
+         height="400"
+         width="600"
     />
     <app-movie-info [movie]="movie"></app-movie-info>
   </div>

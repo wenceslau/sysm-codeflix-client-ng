@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
@@ -8,11 +8,12 @@ import {Router} from '@angular/router';
 })
 export class NavLinksComponent {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+  }
 
   navigateToGenre(genre: string) {
     console.log('navigateToGenre', genre);
-    this.router.navigate(['/search'], { queryParams: { genre } });
+    this.router.navigate(['/search'], {queryParams: {genre}});
   }
 
 }
