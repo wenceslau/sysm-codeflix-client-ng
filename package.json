@@ -8,8 +8,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:sysm-codeflix-client-ng": "node dist/sysm-codeflix-client-ng/server/server.mjs",
-    "lint": "eslint ./src/**/*.{ts,tsx,js} --quiet",
-    "lint:fix": "eslint ./src/**/*.{ts,tsx,js}  --quite --fix"
+    "lint": "eslint ./src/**/*",
+    "lint:fix": "eslint ./src/**/* --fix",
+    "prepare": "husky"
   },
   "private": true,
   "dependencies": {
@@ -41,6 +42,7 @@
     "autoprefixer": "^10.4.19",
     "eslint": "^9.5.0",
     "globals": "^15.4.0",
+    "husky": "^9.0.11",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
