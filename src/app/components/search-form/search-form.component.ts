@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {Router} from '@angular/router';
 
 
@@ -7,16 +7,12 @@ import {Router} from '@angular/router';
   templateUrl: './search-form.component.html',
   styleUrl: './search-form.component.scss'
 })
-export class SearchFormComponent implements OnInit {
+export class SearchFormComponent {
   searchTerm: any;
 
   constructor(
     private router: Router
   ) {
-
-  }
-
-  ngOnInit(): void {
   }
 
   submit() {

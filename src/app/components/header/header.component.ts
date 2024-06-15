@@ -13,6 +13,6 @@ export class HeaderComponent {
   isScrolled() {
     console.log(window.scrollY);
     return window.scrollY > 0;
-  };
+  }
 
 }
