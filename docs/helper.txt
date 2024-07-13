@@ -68,10 +68,10 @@ npm install vidstack@next                                => command to install v
     command to initializer husky, it will create .husky folder
 
 ⇒ pre-commit content file
-    #!/bin/sh
-    . "$(dirname "$0")/_/husky.sh"
+    #!/usr/bin/env sh
+    . "$(dirname -- "$0")/_/husky.sh"
 
-    npx lint-staged
+    npm run lint
 
 ⇒ npm install @commitlint/cli -D
 ⇒ npm install @commitlint/config-conventional -D
